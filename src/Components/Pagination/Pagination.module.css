@@ -1,0 +1,40 @@
+.LeftArrows{
+    width: 40px;
+    height: 40px;
+
+}
+.buttonClick{
+    background: none;
+
+}
+
+.active {
+    background: red;
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+  }
+  .PaginationWrapper{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding-right: 100px;
+    margin-right: 130px;
+  }
+  .NumberSection{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+  }
+  .NumberSection>span{
+    cursor: pointer;
+  }

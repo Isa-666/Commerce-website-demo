@@ -1,0 +1,43 @@
+.InputStyle{width: 230px;
+height: 40px;
+padding-left: 20px;
+background-color: rgb(233, 230, 230);
+border-radius: 5px;
+outline: none;}
+.inputGroup{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ProfileWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.logoutBtn{
+    width: 130px;
+    height: 30px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
+    margin-top: 50px;
+    cursor: pointer;
+    color: white;
+  }
+  .logoutBtn:hover{
+    background-color: rgb(102, 0, 0);
+  }
+  .ChangeInfoBtn{
+    width: 130px;
+    height: 30px;
+    background-color: rgb(91, 160, 27);
+    border-radius: 10px;
+    margin-top: 50px;
+    cursor: pointer;
+    color: white;
+  }
+  .ChangeInfoBtn:hover{
+    background-color: rgb(154, 175, 135);
+  }

@@ -1,0 +1,55 @@
+.ProductFundament{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+ gap: 100px;
+}
+.Categories{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.loadingScreen{
+position: absolute;
+}
+.CategoriesText{
+    display: flex;
+    justify-content: space-between;
+}
+.CategoriesText>span{
+    cursor: pointer;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    transition: all .2s;
+}
+.CategoriesText>span:hover{
+    transform: scale(1.2);
+}
+.LinkStyle{
+    color: black;
+    text-decoration: none;
+}
+@media only screen and (max-width: 425px) {
+    .ProductFundament{
+        display: flex;
+        justify-content: start;
+        flex-wrap: nowrap;
+     gap: 40px;
+     width: 425px;
+     overflow: hidden;
+     overflow-x: visible;
+    }
+    .Categories{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .CategoriesText>span:hover{
+        transform: scale(1);
+    }
+}

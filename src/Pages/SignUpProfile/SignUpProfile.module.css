@@ -1,0 +1,65 @@
+.input{
+   width: 300px;
+    height: 40px;
+    padding-left: 20px;
+    background-color: rgb(233, 230, 230);
+    border-radius: 5px;
+    outline: none;
+  }
+  .fromSection{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+  }
+
+  .signupWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+align-items: center;
+background-color: red;
+max-width: 600px;
+padding: 60px;
+border-radius: 10px;
+background-image: url(./3d08e03cb40252526fee2036a67f07f1.gif);
+box-shadow: -2px 4px 25px -10px rgba(0,0,0,0.75);
+-webkit-box-shadow: -20px 4px 25px -10px rgba(0,0,0,0.75);
+-moz-box-shadow: -20px 4px 25px -10px rgba(0,0,0,0.75);
+  } 
+  .textReg{
+    padding-bottom: 20px;
+    color: white;
+  }
+  .signupFundament{
+
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+
+  }
+  .SignUpBtn{
+    width: 130px;
+    height: 30px;
+    background-color: rgb(34, 31, 255);
+    border-radius: 10px;
+    margin-top: 50px;
+    cursor: pointer;
+    color: white;
+  }
+  .SignUpBtn:hover{
+    background-color: rgb(83, 52, 255);
+  }
+  .FakeEmail{
+    color: red;
+  }
+  .LoginText{
+    color: white;
+  }
+  .LoginText:hover{
+color: rgb(255, 0, 0);
+  }
+  .LinkStyle{
+    color: inherit;
+    text-decoration: none;
+  }

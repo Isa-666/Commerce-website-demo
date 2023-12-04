@@ -1,0 +1,101 @@
+
+.ProductSwitchNameandPrice{
+   font-size: 26px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+.productColors{
+   display: flex;
+   gap: 20px;
+}.productColorsContainer{
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+.Color>span{
+  font-size: 0;
+}
+.Color{
+   width: 32px;
+   border-radius: 50%;
+   height: 32px;
+   cursor: pointer;
+   border: 1px solid gainsboro;
+}
+.imagea{
+   width: 300px;
+}
+.ChooseColorCon{
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+.ProductDescription{
+   background-color: rgb(226, 225, 225);
+   border-radius: 8px;
+   width: 330px;
+   height: 120px;
+   overflow: auto;
+   font-size: 14px;
+   text-align: center;
+   
+}
+.ProductDescription::-webkit-scrollbar{
+   width: 10px;
+ 
+}
+.ProductDescription::-webkit-scrollbar-thumb{
+   background: linear-gradient(transparent,#1c03ff);
+   border-radius: 8px;
+   
+}
+.ProductDescription::-webkit-scrollbar-thumb:hover{
+   background: linear-gradient(transparent,#ff1b1b);
+   
+}
+.ProductDescription::-webkit-scrollbar-track{
+   background-color: rgb(245, 237, 237);
+   border-radius: 8px;
+}
+.quantityProductContainer{
+   display: flex;
+   gap: 20px;
+   align-items: center;
+}
+.minusQuantity{
+   fill: red;
+   cursor: pointer;
+}
+.plusQuantity{
+   fill: green;
+   cursor: pointer;
+}
+.AddProduct{
+   background-color: red;
+   color: white;
+   width: 130px;
+   height: 30px;
+   border-radius: 10px;
+   font-size: 16px;
+   cursor: pointer;
+   -webkit-transition: all 0.3s ease;;
+   -moz-transition: all 0.3s ease;;
+   -o-transition: all 0.3s ease;;
+   transition: all 0.3s ease;
+}
+.AddProduct:hover{
+   -webkit-transform: scale(1.1);
+   -ms-transform: scale(1.1);
+   transform: scale(1.1);
+}
+.Fundament{
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+}
+.LoaderPacMan{
+
+   padding: 100px;
+   
+}

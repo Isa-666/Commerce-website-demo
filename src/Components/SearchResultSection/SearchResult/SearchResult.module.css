@@ -1,0 +1,36 @@
+.productImage{
+    width: 70px;
+    height: 70px;
+
+}
+.SearchResultWrapper{
+    display: flex;
+    gap: 0px;
+    padding: 5px;
+}
+.NameAndPrice{
+    display: flex;   
+    flex-direction: column;
+    gap: 10px;
+  
+}
+.Product{
+    display: flex;
+    cursor: pointer;
+    gap: 20px;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+ 
+}
+
+.Product:hover{
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+}
+.LinkCss{
+    text-decoration: none;
+    color: black;
+}

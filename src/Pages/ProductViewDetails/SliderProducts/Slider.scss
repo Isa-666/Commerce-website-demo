@@ -1,0 +1,32 @@
+.imageProduct{
+    width: 300px;
+    height: 300px;
+display: inline-block;
+
+}
+.images{
+    width: 70px;
+    height: 70px;
+}
+
+.slick-dots li{
+    height: 50px;
+    width: auto;
+}
+.product-slider {
+    width: 25%;
+    
+ }
+.slick-dots{
+    display: flex !important;
+    width: 300px;
+    padding-top: 20px;
+    justify-content: center;
+    margin-top: 16px;
+    position: static;
+    gap: 10px;
+}
+.sliderini{
+    width: 300px;
+}
+

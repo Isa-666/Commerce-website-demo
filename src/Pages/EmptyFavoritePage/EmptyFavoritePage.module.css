@@ -1,0 +1,17 @@
+.AnimationImage{
+    width: 130px;
+    height: 130px;
+    margin-top: 100px;
+    
+}
+.EmptyPageWrapper{
+    display: flex;
+    padding: 100px;
+    justify-content: center;
+    flex-direction: column;
+align-items: center;
+}
+.EmptyPageWrapper>span{
+    max-width: 420px;
+    text-align: center;
+}

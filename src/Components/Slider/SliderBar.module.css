@@ -1,0 +1,21 @@
+.SliderFundament{
+    padding: 45px;
+    border-radius: 10px;
+}
+.SliderContainer{
+    border-radius: 10px;
+}
+.image{
+    height: 800px;
+    border-radius: 10px;
+}
+@media only screen and (max-width: 425px) {
+    .SliderFundament{
+        padding: 15px;
+        border-radius: 10px;
+    }
+    .image{
+        height: 200px;
+        border-radius: 10px;
+    }
+}

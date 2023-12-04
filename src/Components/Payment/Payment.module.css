@@ -1,0 +1,26 @@
+
+.fundament{
+padding: 100px;
+margin-top: 120px;
+display: flex;
+justify-content: center;
+}
+.PayBtn{
+    background-color: rgb(2, 163, 2);
+    border-radius: 10px;
+  width: 200px;
+    height: 30px;
+    cursor: pointer;
+    color: white;
+margin-top: 60px;
+}
+.PayBtn:hover{
+    background-color: rgb(7, 223, 7);
+}
+.PaymentFormFundament{
+    width: 600px;
+text-align: center;
+}
+.paymentText{
+    padding-bottom: 50px;
+}

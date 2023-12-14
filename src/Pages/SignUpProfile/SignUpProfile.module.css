@@ -63,3 +63,44 @@ color: rgb(255, 0, 0);
     color: inherit;
     text-decoration: none;
   }
+  .GoBackButtonWrapper{
+    display: none;
+  }
+  @media only screen and (max-width: 425px) {
+    .GoBackButtonWrapper{
+      display: block;
+     position: absolute;
+     margin-top: 30px;
+    }
+    .signupFundament{
+
+      margin-top: 100px;
+      display: flex;
+      justify-content: center;
+  padding: 30px;
+    }
+
+    .signupWrapper{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+  align-items: center;
+  background-color: red;
+width: 400px;
+  padding: 50px;
+
+  border-radius: 10px;
+  background-image: url(./3d08e03cb40252526fee2036a67f07f1.gif);
+  box-shadow: -2px 4px 25px -10px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -20px 4px 25px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: -20px 4px 25px -10px rgba(0,0,0,0.75);
+    } 
+    .input{
+      width: 200px;
+       height: 40px;
+       padding-left: 20px;
+       background-color: rgb(233, 230, 230);
+       border-radius: 5px;
+       outline: none;
+     }
+  }

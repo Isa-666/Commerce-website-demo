@@ -95,7 +95,26 @@
    gap: 40px;
 }
 .LoaderPacMan{
-
    padding: 100px;
-   
+}
+@media only screen and (max-width: 425px) {
+   .buttonWrapper{
+      display: flex;
+      justify-content: center;
+   }
+   .quantityProductContainer{
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      
+   }
+   .ProductSwitchNameandPrice{
+      font-size: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+   }
 }

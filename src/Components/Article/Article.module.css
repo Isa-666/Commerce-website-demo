@@ -36,3 +36,17 @@ gap: 20px;
     font-weight: 700;
     text-decoration: underline;
 }
+
+@media only screen and (max-width: 425px) {
+    .CardContainers{
+        display: flex;
+        justify-content: center;
+       
+        flex-wrap: wrap;
+        padding-left: 0px;
+        padding-right: 0px;
+        gap: 10px;
+        padding-top: 100px;
+        overflow: hidden;
+    }  
+}

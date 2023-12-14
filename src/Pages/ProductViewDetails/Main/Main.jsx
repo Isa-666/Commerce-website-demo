@@ -121,7 +121,7 @@ const Main = ({
             className={styles.plusQuantity}
           />
         </div>
-        <div>
+        <div className={styles.buttonWrapper}>
           <button onClick={AddToBasket} className={styles.AddProduct}>
             Add to Cart
           </button>

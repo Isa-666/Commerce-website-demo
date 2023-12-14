@@ -1,0 +1,26 @@
+
+.BackIconWrapper{
+ display: none;
+  }
+  .LinkStyles{
+    text-decoration: none;
+    color: black;
+  }
+@media only screen and (max-width: 425px) {
+    .BackIconWrapper{
+      display: flex;
+      justify-content: start;
+      margin-left: 10px;
+      padding-bottom: 30px;
+    }
+    .GoBackBtn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100px;
+      height: 30px;
+      border-radius: 5px;
+      border: sienna 1px solid;
+    }
+}

@@ -6,7 +6,8 @@ import Article from '../../Components/Article/Article'
 import SliderBar from '../../Components/Slider/SliderBar'
 
 const HomePage = () => {
-  return (<>
+
+  return (<div className={styles.HomePageContentWrapper}>
     <SliderBar/>
     <div className={styles.HomePageContent}>
 <MainContent props={"mobile-devices"} text={"Latest mobile smartphones" } />
@@ -15,8 +16,8 @@ const HomePage = () => {
     <MainContent props={"macbooks"} text={"MacBooks"}/>
     <Article/>
     </div>
-    </>
+    </div>
   )
 }
 
-export default HomePage
+export default HomePage;

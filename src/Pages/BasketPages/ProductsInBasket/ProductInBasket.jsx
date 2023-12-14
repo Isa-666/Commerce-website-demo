@@ -6,6 +6,8 @@ import MainProductInBasket from "./MainProductInBasket/MainProductInBasket";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import PacmanLoader from "react-spinners/PacmanLoader";
+import Pagination from "../../../Components/Pagination/Pagination";
+import GoBackButton from "../../../Components/Button/GoBackButton";
 
 const ProductInBasket = () => {
   const [product, setProducts] = useState([]);
@@ -41,6 +43,7 @@ const ProductInBasket = () => {
  
       {loading ? (
         <div className={styles.wrapper}>
+          <GoBackButton/>
           <div>{`You have ${product?.length} products in the card.`}</div>
           <div className={styles.Product_Wrapper_Container}>
             <div className={styles.ProductSection}>
@@ -62,7 +65,7 @@ const ProductInBasket = () => {
                 );
               })}
             </div>
-            <div className={styles.totalPriceWrapper}>
+            <div className={styles.totalPriceWrapper}> 
               <div className={styles.TotalPriceText}>
                 Amount: <span> {`${totalPrice} ${"$"}`}</span>
               </div>
@@ -73,9 +76,10 @@ const ProductInBasket = () => {
                   Total price: <span>{`${totalPrice} ${"$"}`}</span>{" "}
                 </h4>
               </div> 
-<button className={styles.CheckBtn} >Check Out</button>
+<button className={styles.CheckBtn}>Check Out</button>
             </div>
           </div>
+         
         </div>
       ) : (
         <div className={styles.LoadingWrapper}>

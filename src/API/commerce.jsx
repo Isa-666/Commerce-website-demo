@@ -39,7 +39,7 @@ const headers = {
   export const getProductsBySlug = async (setLoading,setProducts, params) => {
     const url = new URL("https://api.chec.io/v1/products");
     Object.keys(params).forEach((key) =>
-      url.searchParams.append(key, params[key])
+      url.searchParams.append(key,params[key])
     );
     try {
       setLoading(true)

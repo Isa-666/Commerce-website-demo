@@ -22,7 +22,12 @@ margin-top: 30px;
     -webkit-box-shadow: -4px 2px 15px 3px rgba(0,0,0,0.75);
     -moz-box-shadow: -4px 2px 15px 3px rgba(0,0,0,0.75);
 }
-
+.FilterIcon{
+  display: none;
+}
+.MobileOptionWrapperDown{
+  display: none;
+}
 .optionsNames>:hover{
     color: blue;
 }
@@ -124,4 +129,90 @@ padding: 5px;
       transform-origin: 100% 0%;
       opacity: 1;
     }
+  }
+  
+  @media only screen and (max-width: 425px) {
+    .sortWrapper{
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      width: 100%;
+  }
+  .sortLabel{
+    position: relative;
+    top: 13px;
+    font-weight: 600;
+    }
+  .srotLabelWrapper{
+    box-shadow: -4px 2px 15px 3px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -4px 2px 15px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px 2px 15px 3px rgba(0,0,0,0.75);
+    width: 160px;
+    height: 40px;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    transition: all .2s;
+}
+  .ProductFoundCounter{
+    text-align: center;
+  }
+  .disabled {
+    opacity: 0.5;
+    pointer-events: none; /* Disable click events */
+  }
+  }
+  @media only screen and (max-width: 425px) {
+    .sortWrapper{
+      width: 320px;
+      position: relative;
+      left: -30px;
+      gap: 50px;
+    }
+    .FilterIcon{
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+
+    .MobileOptionWrapperDown{
+      display: block;
+    position: fixed;
+    z-index: 10;
+ left: 90px;
+    
+    }
+  }
+
+  @media only screen and (max-width: 366px) {
+    .sortWrapper{
+      width: 270px;
+      position: relative;
+      left: -30px;
+      gap: 50px;
+    }
+  }
+  @media only screen and (max-width: 330px) {
+    .sortWrapper{
+      display: flex;
+      align-items: center;
+      gap: 50px;
+     width: 300px;
+     position: relative;
+     left: -50px;
+  }
+  .ProductFoundCounter{
+    text-align: center;
+    width: 200px;
+    font-size: 12px;
+  }
+  .Empty{
+    height: 600px;
+    padding-bottom: 100px;
+    position: relative;
+    left: -50px;
+  }
   }

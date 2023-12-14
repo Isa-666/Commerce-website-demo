@@ -6,6 +6,7 @@ import { z } from "zod";
 import { userLogin } from "../../store/actions/login";
 import MailSend from "./preview.jpg";
 import LoginMessage from "../LoginMessage/LoginMessage";
+import GoBackButton from "../../Components/Button/GoBackButton";
 
 const schema = z.object({
   email: z.string().email(),
@@ -34,11 +35,13 @@ const LoginNext = () => {
         <LoginMessage />
       ) : (
         <div className={styles.LoginWrapper}>
+          <GoBackButton/>
           <img className={styles.LogoMail} src={MailSend} alt="" />
           <div className={styles.text}>
             Please enter a working email address here, so we can send you a
             verification link.
           </div>
+          
           <form
             onSubmit={handleSubmit(onSubmit)}
             className={styles.FormSection}
@@ -50,7 +53,7 @@ const LoginNext = () => {
                 placeholder="example@gmail.com"
               />
             </div>
-            {errors.email && <span>Yanlış Ad</span>}
+            {errors.email && <span>Write active email.</span>}
             <button className={styles.buttonSend}>Send link</button>
           </form>
         </div>

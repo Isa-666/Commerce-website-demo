@@ -7,7 +7,7 @@ import { toast, ToastContainer } from "react-toastify";
 import _ from "lodash";
 import { debounce } from "lodash";
 import "react-toastify/dist/ReactToastify.css";
-const Product = ({ el }) => {
+const Product = React.memo(({ el }) => {
   const [products, setProducts] = useState([]);
   const showToastWarning = () => {
     toast.warning("The product is already in the cart", {
@@ -87,6 +87,6 @@ const Product = ({ el }) => {
       <ToastContainer limit={2} />
     </>
   );
-};
+});
 
 export default Product;

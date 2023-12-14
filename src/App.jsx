@@ -15,6 +15,7 @@ import SignUpProfile from "./Pages/SignUpProfile/SignUpProfile";
 import ExchangeToken from "./Pages/ExchangeToken/ExchangeToken";
 import LoginNext from "./Pages/LoginNext/LoginNext";
 import Profile from "./Pages/Profile/Profile";
+import Error from "./Pages/Error/Error";
 function App() {
   return (
     <>    
@@ -35,6 +36,7 @@ function App() {
             <Route path="/create-token/:token" element={<ExchangeToken />} />
             <Route path="/EmptyBasketProduct" element={<EmptyBasketPage />} />
             <Route path="/user-profile/:tab" element={<Profile />} />
+            <Route path="*" element={<Error/>} />
           </Routes>
           <Footer />
         </MyProvider>

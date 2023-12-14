@@ -9,6 +9,7 @@ import "react-phone-number-input/style.css";
 import { userRegister } from "../../store/actions/login";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import GoBackButton from "../../Components/Button/GoBackButton";
 
 
 const schema=z.object({
@@ -33,7 +34,8 @@ navigate("/login")
     });
   };
 
-  return (
+  return (<>
+  <div className={styles.GoBackButtonWrapper}><GoBackButton/></div>
     <div className={styles.signupFundament}>
       <div className={styles.signupWrapper}>
         <div className={styles.textReg}>
@@ -60,7 +62,7 @@ navigate("/login")
         </form>
         <div className={styles.LoginText}><Link to={"/login"} className={styles.LinkStyle}>If you have account, login?</Link></div>
       </div>
-    </div>
+    </div></>
   );
 };
 

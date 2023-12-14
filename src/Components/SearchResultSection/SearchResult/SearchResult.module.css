@@ -34,3 +34,21 @@
     text-decoration: none;
     color: black;
 }
+@media only screen and (max-width: 425px) {
+    .NameAndPrice{
+        display: flex;   
+        flex-direction: column;
+        gap: 10px;
+      font-size: 12px;
+    }
+    .productImage{
+        width: 50px;
+        height: 50px;
+    
+    }
+    .SearchResultWrapper{
+        display: flex;
+        gap: 0px;
+        padding: 5px;
+    }
+}

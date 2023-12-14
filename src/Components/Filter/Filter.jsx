@@ -11,7 +11,6 @@ const Filter = ({ setSelectedBrands }) => {
   const onChangeHandler = (e, value) => {
     setSelectedBrands((prev) => {
       let newOptions = prev;
-      console.log(newOptions);
       if (e.target.checked) {
         newOptions = prev.concat(",", value.join(","));
       } else {

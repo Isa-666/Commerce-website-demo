@@ -15,6 +15,9 @@ import { setCartLength } from "../../store/reducers/BasketReducers";
 import SearchResultList from "../SearchResultSection/SearchResultList/SearchResultList";
 import { useMyContext } from "./Context/CategoryContextAndSearch";
 import HeaderCategoriesNav from "./HeaderCategoriesNav/HeaderCategoriesNav";
+import MobileNav from "./MobileNav/MobileNav";
+
+
 const params = {
   depth: "2",
   sortDirection: "asc",
@@ -36,6 +39,10 @@ const Header = () => {
   } = useMyContext();
   const isLogin = commerce.customer.isLoggedIn();
   const [user, setUser] = useState({});
+  const [mobileNavbar, setMobileNavbar] = useState(false);
+  const setDropdownOpen = () => {
+    setMobileNavbar(true);
+  };
 
   useEffect(() => {
     isLogin && commerce.customer.about().then((customer) => setUser(customer));
@@ -44,13 +51,13 @@ const Header = () => {
     getProductFromBasket().then((p) =>
       dispatch(setCartLength(p?.total_unique_items))
     );
-    getCategoriesName(setCategories, setLoading,params);
+    getCategoriesName(setCategories,setLoading,params);
   }, [params]);
-
-  return (
+console.log("Header");
+  return (<>
     <div className={styles.HeaderWrapper}>
       <div className={styles.HeaderContainer}>
-        <div className={styles.MobileHamburgerWrapper}><RxHamburgerMenu className={styles.MobileHamburger}/></div>
+        <div className={styles.MobileHamburgerWrapper}><RxHamburgerMenu onClick={setDropdownOpen} className={styles.MobileHamburger}/></div>
         <Link className={styles.ShopLogo} to={"/"}>
           <img className={styles.shopLogo} src={ShopLogo} alt="" />
         </Link>
@@ -69,7 +76,7 @@ const Header = () => {
             <SearchResultList handleChange={handleChange} results={results} />
           </div>
         </div>
-
+        
         <div className={styles.LogosContainer}>
           <div className={styles.ProfileLogoContainer}>
             {user.firstname ? (
@@ -101,7 +108,16 @@ const Header = () => {
         loading={loading}
         navBar={navBar}
       />
+<MobileNav
+mobileNavbar={mobileNavbar}
+categories={categories}
+loading={loading}
+ProductCounter={ProductCounter}
+setMobileNavbar={setMobileNavbar}
+/>
     </div>
+
+    </>
   );
 };
 

@@ -9,6 +9,7 @@ import {
 } from "../../../../API/commerce";
 import { toast, ToastContainer } from "react-toastify";
 import { setCartLength } from "../../../../store/reducers/BasketReducers";
+import Pagination from "../../../../Components/Pagination/Pagination";
 
 const MainProductInBasket = ({
   name,
@@ -100,6 +101,7 @@ const MainProductInBasket = ({
         </div>
       </div>
       <ToastContainer />
+      
     </div>
   );
 };

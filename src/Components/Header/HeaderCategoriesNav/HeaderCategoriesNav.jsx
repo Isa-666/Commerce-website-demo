@@ -6,7 +6,7 @@ const HeaderCategoriesNav = ({ navBar, categories, loading }) => {
   const reloadPageAfterDelay = () => {
     setTimeout(function () {
       window.location.reload();
-    }, 300);
+    }, 100);
   };
 
   if (loading) {

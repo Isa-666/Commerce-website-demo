@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { DeleteProduct } from "../../Storage/indexDDB";
 import { useNavigate } from "react-router-dom";
-
+import GoBackButton from "../../Components/Button/GoBackButton";
 const FavoritesProduct = ({ getAllProducts }) => {
   const [favorites, setFavorites] = useState([]);
 
@@ -34,7 +34,8 @@ const FavoritesProduct = ({ getAllProducts }) => {
 
   return (
     <div className={styles.ProductFavFundament}>
-      {favorites.map((pro) => (
+      <GoBackButton/>
+            {favorites.map((pro) => (
         <div className={styles.ProductFav} key={pro.id}>
           <div className={styles.ProductName}>{pro.name}</div>
           <div>

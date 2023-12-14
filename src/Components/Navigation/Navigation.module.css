@@ -1,0 +1,30 @@
+.NavigationWrapper{
+    display: flex;
+    height: 23px;
+    margin-left: 120px;
+    position: relative;
+   padding-left: 50px;
+   padding-right: 50px;
+   padding-top: 50px;
+ width: 470px;
+}
+.HomePagePath{
+    display: flex;
+    align-items: center;
+}
+.PathNameNav{
+    display: flex;
+    align-items: center;
+}
+.PathNames{
+    display: flex;
+    align-items: center;
+}
+.PathNames:last-child .arrowIcon{
+display: none;
+}
+@media only screen and (max-width: 425px) {
+    .NavigationWrapper{
+   display: none;
+    }
+}

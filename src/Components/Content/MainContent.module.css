@@ -1,8 +1,11 @@
-.ProductFundament{
+.ProductFundamenta{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
  gap: 100px;
+}
+.ziqqot{
+    display: none;
 }
 .Categories{
     display: flex;
@@ -33,23 +36,42 @@ position: absolute;
     text-decoration: none;
 }
 @media only screen and (max-width: 425px) {
-    .ProductFundament{
+    .ziqqot{
+        display: none;
+    }
+    .ProductFundamenta{
         display: flex;
         justify-content: start;
         flex-wrap: nowrap;
      gap: 40px;
      width: 425px;
      overflow: hidden;
-     overflow-x: visible;
+      overflow-x: scroll;
+padding: 0px;
     }
+
     .Categories{
         display: flex;
         flex-direction: column;
         gap: 35px;
         padding-left: 0px;
         padding-right: 0px;
+        padding: 0px;
+        overflow-x: hidden;
     }
     .CategoriesText>span:hover{
         transform: scale(1);
     }
+    .LoaderWrapper{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+ 
+    }
+}
+@media only screen and (max-width: 385px) {
+.ziqqot{
+    display: block;
+}
+
 }

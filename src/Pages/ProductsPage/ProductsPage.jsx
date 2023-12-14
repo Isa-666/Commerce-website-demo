@@ -9,7 +9,6 @@ import Filter from "../../Components/Filter/Filter";
 import Pagination from "../../Components/Pagination/Pagination";
 import Navigation from "../../Components/Navigation/Navigation";
 import PriceFilter from "../../Components/PriceFilter/PriceFilter";
-
 import GoBackButton from "../../Components/Button/GoBackButton";
 const ProductsPage = () => {
   window.scrollTo(0, 0);

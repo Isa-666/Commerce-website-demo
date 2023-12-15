@@ -3,7 +3,7 @@ import axios from "axios";
 
 // Create a Commerce instance
 export const commerce = new Commerce("pk_52514a0e3417abcc6766ba7419ad204979fbdbf97942b");
-const token="pk_52514a0e3417abcc6766ba7419ad204979fbdbf97942b"
+export const token="pk_52514a0e3417abcc6766ba7419ad204979fbdbf97942b"
 
 const headers = {
     "X-Authorization": token,
@@ -35,42 +35,6 @@ const headers = {
       return err.message;
     }
   };
-
-  export const getProductsBySlug = async (setLoading,setProducts, params) => {
-    const url = new URL("https://api.chec.io/v1/products");
-    Object.keys(params).forEach((key) =>
-      url.searchParams.append(key,params[key])
-    );
-    try {
-      setLoading(true)
-      const { data: response } = await axios.get(url, { headers });
-      setProducts(response);
-      setLoading(false)
-      return response.data;
-    } catch (err) {
-      return err.message;
-    }
-  };
-
-
-  export const getCategoriesName = async (setCategories,setLoading,params) => {
-    const url = new URL("https://api.chec.io/v1/categories");
-    Object.keys(params).forEach((key) =>
-    url.searchParams.append(key, params[key])
-  );
-    try {
-      setLoading(true);
-      const { data: response } = await axios.get(url, { headers });
-      setCategories(response.data);
-      setLoading(false);
-      return response.data;
-    } catch (err) {
-      console.log(err);
-      return err.message;
-    }
-  };
- 
-  
 
   export async function addProductToCart(phoneId, count,variant){
     try {

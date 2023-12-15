@@ -8,8 +8,32 @@ const HeaderCategoriesNav = ({ navBar, categories, loading }) => {
       window.location.reload();
     }, 100);
   };
-
-    return (
+if (loading) {
+  return (
+    <div className={styles.CategoriesWrapper}>
+      {navBar?.slice(0, 9).map((el, index) => {
+        return (
+          <div className={styles.categoriesBlock} key={el.id}>
+            <Link
+              onClick={reloadPageAfterDelay}
+              to={`/ProductsPage/${el.slug}`}
+              className={styles.LinkStyle}
+            >
+              {el.name}
+            </Link>
+            <span className={styles.pan}>
+              <SubCategoriesNavDrop
+                subcategories={navBar[index].children}
+                reloadPageAfterDelay={reloadPageAfterDelay}
+              />
+            </span>
+          </div>
+        );
+      })}
+    </div>
+  );
+}else {
+      return (
       <div className={styles.CategoriesWrapper}>
         {categories?.slice(0, 9).map((el, index) => {
           return (
@@ -32,6 +56,8 @@ const HeaderCategoriesNav = ({ navBar, categories, loading }) => {
         })}
       </div>
     );
+}
+
   
 };
 

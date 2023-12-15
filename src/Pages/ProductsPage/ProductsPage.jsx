@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useParams, useSearchParams,Link } from "react-router-dom";
-import { getProductsBySlug } from "../../API/commerce";
+
 import { optionsOrder } from "./data";
 import styles from "./ProductPage.module.css";
 import Product from "../../Components/Product/Product";
@@ -10,6 +10,7 @@ import Pagination from "../../Components/Pagination/Pagination";
 import Navigation from "../../Components/Navigation/Navigation";
 import PriceFilter from "../../Components/PriceFilter/PriceFilter";
 import GoBackButton from "../../Components/Button/GoBackButton";
+import { getProductsBySlug } from "../../store/actions/GetProductBySlug";
 const ProductsPage = () => {
   window.scrollTo(0, 0);
   const [products, setProducts] = useState([]);
@@ -38,7 +39,7 @@ const ProductsPage = () => {
   );
 
   useEffect(() => {
-    getProductsBySlug(setLoading, setProducts, params);
+   getProductsBySlug(setLoading, setProducts, params);
   }, [slug, params]);
 
   return (

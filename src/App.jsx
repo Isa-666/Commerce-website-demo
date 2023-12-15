@@ -9,7 +9,6 @@ import { getAllProducts } from "./Storage/indexDDB";
 import FavoritesProduct from "./Pages/Favorites/FavoritesProduct";
 import EmptyFavoritePage from "./Pages/EmptyFavoritePage/EmptyFavoritePage";
 import EmptyBasketPage from "./Pages/EmptyBasketPage/EmptyBasketPage";
-import { MyProvider } from "./Components/Header/Context/CategoryContextAndSearch";
 import ProductsPage from "./Pages/ProductsPage/ProductsPage";
 import SignUpProfile from "./Pages/SignUpProfile/SignUpProfile";
 import ExchangeToken from "./Pages/ExchangeToken/ExchangeToken";
@@ -19,7 +18,7 @@ import Error from "./Pages/Error/Error";
 function App() {
   return (
     <>    
-    <MyProvider>
+
           <Header />
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -39,7 +38,7 @@ function App() {
             <Route path="*" element={<Error/>} />
           </Routes>
           <Footer />
-        </MyProvider>
+       
    
     </>
   );

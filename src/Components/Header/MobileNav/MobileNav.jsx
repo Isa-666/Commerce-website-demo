@@ -8,7 +8,6 @@ import { CgProfile } from "react-icons/cg";
 import { AiOutlineShoppingCart, AiFillHeart } from "react-icons/ai";
 import { IoMdArrowDropright, IoMdArrowDropdown } from "react-icons/io";
 import { commerce } from "../../../API/commerce";
-import { useMyContext } from "../Context/CategoryContextAndSearch";
 import { PacmanLoader } from "react-spinners";
 const MobileNav = ({
   setMobileNavbar,
@@ -16,6 +15,7 @@ const MobileNav = ({
   categories,
   loading,
   ProductCounter,
+  handleBasket
 }) => {
   const [currentDropdown, setCurrentDropdown] = useState(null);
 const [OpenCat,setOpenCat]=useState(categories)
@@ -25,7 +25,7 @@ const [OpenCat,setOpenCat]=useState(categories)
       setCurrentDropdown(null);
     }
   };
-  const {handleBasket,} =useMyContext();
+ 
   const isLogin = commerce.customer.isLoggedIn();
   const [user, setUser] = useState({});
   
